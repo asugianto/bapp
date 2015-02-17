@@ -1,0 +1,53 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+        <form class="form-horizontal" ng-submit="submitWord()">
+            <input type="text" placeholder="Enter word…" ng-model="submittedWord">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div class="alert alert-error" ng-show="invalidInput">error</div>  
+ 
+        <table class="table table-striped">
+          <tr>
+            <th>Word</th>
+            <th>Points</th>
+          </tr>
+          <tr ng-repeat="word in wordsInputted">
+            <td class="word">{{word.word}}</td>
+            <td class="points">{{word.points}} pt</td>
+          </tr>
+          <tr class="total">
+            <td></td>
+            <td>{{totalPoints}} pts</td>
+          </tr>
+        </table>
+      </div>
+  
+        <!--<div ng-repeat="letter in initialBoard">
+            {{letter}}
+            <div class="col" data-ng-repeat="col in letter.col">{{col}}</div>
+        </div>-->
+
+      <div class="span8">
+        <div class="row-fluid boogle-board-controllers">
+          <div class="span12">
+            <div class="timer-container">{{minute}}:{{second}}</div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span12">
+              <table class="boogle-board">
+                  <tr ng-repeat="letter in initialBoard">
+                      <td ng-repeat="col in letter.col">{{col}}</td>
+                  </tr>
+                  
+              </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+

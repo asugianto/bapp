@@ -1,0 +1,19 @@
+/* app css stylesheet */
+body {
+  position: relative;
+  padding-top: 60px;
+}
+.total {
+  font-weight: bold;
+}
+.timer-container {
+  padding-top: 5px;
+}
+.boogle-board {
+  border: 1px solid #eee;
+}
+.boogle-board td {
+  padding: 35px;
+  font-size: 45px;
+  text-align: center;
+}
